@@ -29,6 +29,9 @@
 # - x += 1          # atajo de x = x + 1
 # - x += valor      # atajo de x = x + valor
 #
+#contador += 1 (esto si es valido) 
+#contador =+ 1 (esto no es valido) 
+#
 # ERRORES COMUNES
 # - Usar = (asignación) cuando se quería == (comparación) en condiciones.
 # - Reiniciar el contador/total dentro del "flujo" por error (debe iniciarse una vez).

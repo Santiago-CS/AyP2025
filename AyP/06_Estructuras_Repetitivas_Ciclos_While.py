@@ -41,7 +41,7 @@ i = 1
 while i <= N:
     print("i =", i)
     i = i + 1  # actualización obligatoria
-
+print(i)
 # Patrón C2) Acumulador: suma de 1..N (N conocido)
 
 N = 5
@@ -192,3 +192,70 @@ while option != "4":
 # - Ubica la INICIALIZACIÓN antes del while y la ACTUALIZACIÓN dentro del cuerpo.
 # - Prefiere banderas (valid = False) para control de repetición en validación.
 # - Usa mensajes de error claros en try-except para ayudar al usuario.
+
+#Cuenta la cantidad de  numeros pares e impares del 1 al 100 usando ciclos while
+N = 100
+i = 1
+while i <= N:
+    print("i =", i)
+    i = i + 1  # actualización obligatoria
+print(i)
+# Patrón C2) Acumulador: suma de 1..N (N conocido)
+
+N = 100
+i = 1
+total = 0
+while i <= N:
+    total = total + i
+    i = i + 1
+print("Sum 1..N:", total)
+
+# Patrón C3) Centinela textual: leer hasta 'fin' (sin listas)
+
+print("Enter values, 'fin' to stop:")  # (Ejemplo demostrativo)
+acc = 0.0
+count = 0
+val = input("Value (or 'fin'): ")
+while val.strip().lower() != "fin":
+    try:
+        x = float(val)
+        acc = acc + x
+        count = count + 1
+    except ValueError:
+        print("Invalid:", val)
+    if count == 1:
+        val = "3"
+    elif count == 2:
+        val = "fin"
+    else:
+        val = "fin"
+if count == 0:
+    print("No numbers")
+else:
+    print("Sum:", acc, "| Avg:", acc / count)
+
+
+
+
+#
+pares = 0
+impares = 0
+numero = 1
+
+while numero <= 1000:
+    if numero % 2 == 0:
+        pares = pares + 1
+    else:
+        impares = impares + 1
+    
+    numero = numero +   1
+
+print(f"Cantidad de números pares: {pares}")
+print(f"Cantidad de números impares: {impares}")
+
+## ---------------------------------------------------------------
+# Ejercicio 05 - Contar dígitos
+# Enunciado: Lee un entero (como texto o número) y cuenta cuántos dígitos tiene (sin strings).
+# (Ejercicio de práctica; SOLUCIÓN completa abajo.)
+# ---------------------------------------------------------------
+

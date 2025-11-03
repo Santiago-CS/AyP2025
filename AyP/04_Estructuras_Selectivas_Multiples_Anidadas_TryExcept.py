@@ -85,7 +85,7 @@ else:
 #   - ValueError: al convertir texto a número (int/float).
 #   - ZeroDivisionError: al dividir entre 0.
 #   - IndexError: indexar fuera de rango (con cadenas, si se accede a s[pos] inválida).
-#
+#   [inicio:fin:paso]
 # Importante: sin ciclos, si ocurre error no re-pedimos datos; solo informamos.
 
 # --- Código ilustrativo: conversión y división seguras ---
