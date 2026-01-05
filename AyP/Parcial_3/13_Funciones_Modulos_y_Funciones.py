@@ -28,12 +28,35 @@
 # - Una función sin return explícito retorna None.
 #
 # Ejemplo simple:
-def suma(a, b):
+def suma(a, b): #se hace una funcion y regresa a+b
     '''Suma dos números y retorna el resultado.'''
     return a + b
 
 x = suma(10, 5)        # llamada
 print("add(10,5) ->", x)  # 15
+
+## Ejercicio 5 - crear una funcion para contar digitos en cadena
+def suma_digitos(cadena):
+    count = 0
+    numero = "0123456789"
+    for i in cadena:
+        if i in numero:
+            count += 1
+    return count
+
+suma_digitos("Hola buenos días a mis 19 alumnos sobrevivientes")
+
+#CALCULADORA PARA CANDADO
+def candado_examen(c1,c2,c3, c4, c5, c6, c7):
+    suma = c1 + c2 + c3 + c4 + c5 + c6 + c7 
+    promedio = suma / 7
+    if c1 + c2 + c3 + c4 + c5 + c6 + c7 < 420:
+        return "No pasa el candado", suma , promedio
+    else:
+        return "Si pasa el candado", suma , promedio
+
+candado_examen(int(input()), int(input()), int(input()), int(input()), int(input()), int(input()), int(input()))
+##
 
 # ---------------------------------------------------------------
 # C) MÓDULOS: IMPORTACIÓN Y ESPACIOS DE NOMBRES
@@ -48,12 +71,13 @@ import math
 print(math.pi)
 print(math.sqrt(25))
 print(math.floor(3.7))
+print(math.ceil(3.1))    #El profe recomienda mas el uso de este para no crear confusiones con las variables
 
 # También podemos importar un nombre específico:
-from math import sqrt
+from math import sqrt, ceil, floor, pi
 print(sqrt(81))
-
-# O usar un alias para el módulo:
+pi
+#Un apodo O usar un alias para el módulo:
 import math as m
 print(m.ceil(2.1))
 

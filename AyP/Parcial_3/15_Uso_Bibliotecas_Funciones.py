@@ -36,7 +36,7 @@ except ValueError:
     print("ValueError: dominio inválido")
 
 # Potencias y valores absolutos (pow, fabs):
-print(math.pow(2, 10))   
+print(math.pow(2, 10)) # 2 elevado a la 3 2**3  
 print(math.fabs(-3.5))   
 
 # Piso y techo (enteros):
@@ -62,14 +62,14 @@ print(math.isclose(a, b, rel_tol=1e-9))
 import random
 
 # Semilla: fija la secuencia (útil para depurar o reproducir ejemplos)
-random.seed(12345)
+random.seed(12345) # mas comunes 0 o 42
 
 # Enteros aleatorios en [a, b] (incluye extremos):
 print(random.randint(1,6))
 
 # choice: elige un elemento de una lista no vacía
 faces = ["A", "B", "C", "D"]
-print(random.choice(faces))
+print(random.choice(faces)) #el .choice de esa lista selecciona un valor de forma aleatoria
 
 # sample: muestra SIN reemplazo
 print(random.sample(range(10), 5))
